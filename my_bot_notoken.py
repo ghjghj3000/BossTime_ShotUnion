@@ -1,54 +1,56 @@
 import asyncio
-import os
+
 import discord
 
 import datetime
+import pytz
 
+KST = pytz.timezone('Asia/Seoul')
 intents = discord.Intents.default()
 intents.message_content = True
 
 client = discord.Client(intents=intents)
 channel = client.get_channel(1114405355741528124) #****보낼 채널 ID****
 
-gigamTime = datetime.datetime.now()+datetime.timedelta(days=365)
-gudeTime= datetime.datetime.now()+datetime.timedelta(days=365)
-ifTime= datetime.datetime.now()+datetime.timedelta(days=365)
-pinyxTime= datetime.datetime.now()+datetime.timedelta(days=365)
-mayoTime= datetime.datetime.now()+datetime.timedelta(days=365)
-dehugTime= datetime.datetime.now()+datetime.timedelta(days=365)
-sedeTime= datetime.datetime.now()+datetime.timedelta(days=365)
-sede2Time= datetime.datetime.now()+datetime.timedelta(days=365)
-jungdeTime= datetime.datetime.now()+datetime.timedelta(days=365)
-dongdeTime= datetime.datetime.now()+datetime.timedelta(days=365)
-arTime= datetime.datetime.now()+datetime.timedelta(days=365)
-jakTime= datetime.datetime.now()+datetime.timedelta(days=365)
-kapaTime= datetime.datetime.now()+datetime.timedelta(days=365)
-warmTime= datetime.datetime.now()+datetime.timedelta(days=365)
-deathTime= datetime.datetime.now()+datetime.timedelta(days=365)
-curchTime= datetime.datetime.now()+datetime.timedelta(days=365)
-greenTime= datetime.datetime.now()+datetime.timedelta(days=365)
-redTime= datetime.datetime.now()+datetime.timedelta(days=365)
-sanduTime= datetime.datetime.now()+datetime.timedelta(days=365)
+gigamTime = datetime.datetime.now(KST)+datetime.timedelta(days=365)
+gudeTime= datetime.datetime.now(KST)+datetime.timedelta(days=365)
+ifTime= datetime.datetime.now(KST)+datetime.timedelta(days=365)
+pinyxTime= datetime.datetime.now(KST)+datetime.timedelta(days=365)
+mayoTime= datetime.datetime.now(KST)+datetime.timedelta(days=365)
+dehugTime= datetime.datetime.now(KST)+datetime.timedelta(days=365)
+sedeTime= datetime.datetime.now(KST)+datetime.timedelta(days=365)
+sede2Time= datetime.datetime.now(KST)+datetime.timedelta(days=365)
+jungdeTime= datetime.datetime.now(KST)+datetime.timedelta(days=365)
+dongdeTime= datetime.datetime.now(KST)+datetime.timedelta(days=365)
+arTime= datetime.datetime.now(KST)+datetime.timedelta(days=365)
+jakTime= datetime.datetime.now(KST)+datetime.timedelta(days=365)
+kapaTime= datetime.datetime.now(KST)+datetime.timedelta(days=365)
+warmTime= datetime.datetime.now(KST)+datetime.timedelta(days=365)
+deathTime= datetime.datetime.now(KST)+datetime.timedelta(days=365)
+curchTime= datetime.datetime.now(KST)+datetime.timedelta(days=365)
+greenTime= datetime.datetime.now(KST)+datetime.timedelta(days=365)
+redTime= datetime.datetime.now(KST)+datetime.timedelta(days=365)
+sanduTime= datetime.datetime.now(KST)+datetime.timedelta(days=365)
 
-tmp_gigamTime = datetime.datetime.now()+datetime.timedelta(days=365)
-tmp_gudeTime= datetime.datetime.now()+datetime.timedelta(days=365)
-tmp_ifTime= datetime.datetime.now()+datetime.timedelta(days=365)
-tmp_pinyxTime= datetime.datetime.now()+datetime.timedelta(days=365)
-tmp_mayoTime= datetime.datetime.now()+datetime.timedelta(days=365)
-tmp_dehugTime= datetime.datetime.now()+datetime.timedelta(days=365)
-tmp_sedeTime= datetime.datetime.now()+datetime.timedelta(days=365)
-tmp_sede2Time= datetime.datetime.now()+datetime.timedelta(days=365)
-tmp_jungdeTime= datetime.datetime.now()+datetime.timedelta(days=365)
-tmp_dongdeTime= datetime.datetime.now()+datetime.timedelta(days=365)
-tmp_arTime= datetime.datetime.now()+datetime.timedelta(days=365)
-tmp_jakTime= datetime.datetime.now()+datetime.timedelta(days=365)
-tmp_kapaTime= datetime.datetime.now()+datetime.timedelta(days=365)
-tmp_warmTime= datetime.datetime.now()+datetime.timedelta(days=365)
-tmp_deathTime= datetime.datetime.now()+datetime.timedelta(days=365)
-tmp_curchTime= datetime.datetime.now()+datetime.timedelta(days=365)
-tmp_greenTime= datetime.datetime.now()+datetime.timedelta(days=365)
-tmp_redTime= datetime.datetime.now()+datetime.timedelta(days=365)
-tmp_sanduTime= datetime.datetime.now()+datetime.timedelta(days=365)
+tmp_gigamTime = datetime.datetime.now(KST)+datetime.timedelta(days=365)
+tmp_gudeTime= datetime.datetime.now(KST)+datetime.timedelta(days=365)
+tmp_ifTime= datetime.datetime.now(KST)+datetime.timedelta(days=365)
+tmp_pinyxTime= datetime.datetime.now(KST)+datetime.timedelta(days=365)
+tmp_mayoTime= datetime.datetime.now(KST)+datetime.timedelta(days=365)
+tmp_dehugTime= datetime.datetime.now(KST)+datetime.timedelta(days=365)
+tmp_sedeTime= datetime.datetime.now(KST)+datetime.timedelta(days=365)
+tmp_sede2Time= datetime.datetime.now(KST)+datetime.timedelta(days=365)
+tmp_jungdeTime= datetime.datetime.now(KST)+datetime.timedelta(days=365)
+tmp_dongdeTime= datetime.datetime.now(KST)+datetime.timedelta(days=365)
+tmp_arTime= datetime.datetime.now(KST)+datetime.timedelta(days=365)
+tmp_jakTime= datetime.datetime.now(KST)+datetime.timedelta(days=365)
+tmp_kapaTime= datetime.datetime.now(KST)+datetime.timedelta(days=365)
+tmp_warmTime= datetime.datetime.now(KST)+datetime.timedelta(days=365)
+tmp_deathTime= datetime.datetime.now(KST)+datetime.timedelta(days=365)
+tmp_curchTime= datetime.datetime.now(KST)+datetime.timedelta(days=365)
+tmp_greenTime= datetime.datetime.now(KST)+datetime.timedelta(days=365)
+tmp_redTime= datetime.datetime.now(KST)+datetime.timedelta(days=365)
+tmp_sanduTime= datetime.datetime.now(KST)+datetime.timedelta(days=365)
 
 gigamTimeString = '99:99:99'
 gudeTimeString = '99:99:99'
@@ -112,8 +114,8 @@ sanduFlag = False
 
 nowTimeString = '1'
 
-access_tokken = os.environ["BOT_TOKKEN"]
-token = access_tokken
+# 1-6에서 생성된 토큰을 이곳에 입력해주세요.
+token = 'MTExMjYyNjA3NTM0OTA0MTE3Mw.G6ezJF.9ILD9YnChy_BhUkmJMv3YezxajFxPZSQBqFOGo'
 
 #channel = client.get_channel(1112656268826525807) #****보낼 채널 ID****
 
@@ -165,7 +167,7 @@ async def my_background_task():
     global jungdeFlag
 
     while not client._closed:
-        now = datetime.datetime.now()
+        now = datetime.datetime.now(KST)
         priv = now+datetime.timedelta(minutes=1)
         privTimeString = priv.strftime('%H:%M:%S')
         nowTimeString = now.strftime('%H:%M:%S')
@@ -302,7 +304,6 @@ async def on_ready():
     # 이 기능을 사용하여 봇의 상태를 간단하게 출력해줄 수 있습니다
     # await client.channelange_presence(game=discord.Game(name="반갑습니다 :D", type=1))
 
-    
 
 # 봇이 새로운 메시지를 수신했을때 동작되는 코드입니다
 @client.event
@@ -362,24 +363,24 @@ async def on_message(message):
         if length == 11:
             hours = hello[6:8]
             minutes = hello[9:11]
-            now = datetime.datetime.now()
+            now = datetime.datetime.now(KST)
             now = now.replace(hour=int(hours), minute=int(minutes))
         elif length == 12:
             hours = hello[7:9]
             minutes = hello[10:12]
-            now = datetime.datetime.now()
+            now = datetime.datetime.now(KST)
             now = now.replace(hour=int(hours), minute=int(minutes))
         elif length == 10:
             hours = hello[5:7]
             minutes = hello[8:10]
-            now = datetime.datetime.now()
+            now = datetime.datetime.now(KST)
             now = now.replace(hour=int(hours), minute=int(minutes))
         else :
-            now = datetime.datetime.now()
+            now = datetime.datetime.now(KST)
             nowTimeString = now.strftime('%H:%M:%S')
     except:
         print('exception')
-        now = datetime.datetime.now()
+        now = datetime.datetime.now(KST)
         nowTimeString = now.strftime('%H:%M:%S')
 
 
@@ -528,7 +529,7 @@ async def on_message(message):
             if (line.startswith(' - 화탕지옥 : ')):
                 hours = line[8:10]
                 minutes = line[11:13]
-                now2 = datetime.datetime.now()
+                now2 = datetime.datetime.now(KST)
                 now2 = now.replace(hour=int(hours), minute=int(minutes))
                 gigamTime = now2
                 gigamTimeString = gigamTime.strftime('%H:%M:%S')
@@ -536,7 +537,7 @@ async def on_message(message):
             if (line.startswith(' - 폭 화탕지옥 : ')):
                 hours = line[8:10]
                 minutes = line[11:13]
-                now2 = datetime.datetime.now()
+                now2 = datetime.datetime.now(KST)
                 now2 = now.replace(hour=int(hours), minute=int(minutes))
                 gudeTime = now2
                 gudeTimeString = gudeTime.strftime('%H:%M:%S')
@@ -544,7 +545,7 @@ async def on_message(message):
             if (line.startswith(' - 한빙지옥 : ')):
                 hours = line[8:10]
                 minutes = line[11:13]
-                now2 = datetime.datetime.now()
+                now2 = datetime.datetime.now(KST)
                 now2 = now.replace(hour=int(hours), minute=int(minutes))
                 ifTime = now2
                 ifTimeString = ifTime.strftime('%H:%M:%S')
@@ -552,7 +553,7 @@ async def on_message(message):
             if (line.startswith(' - 폭 한빙지옥 : ')):
                 hours = line[8:10]
                 minutes = line[11:13]
-                now2 = datetime.datetime.now()
+                now2 = datetime.datetime.now(KST)
                 now2 = now.replace(hour=int(hours), minute=int(minutes))
                 mayoTime = now2
                 mayoTimeString = mayoTime.strftime('%H:%M:%S')
@@ -560,7 +561,7 @@ async def on_message(message):
             if (line.startswith(' - 거해지옥 : ')):
                 hours = line[8:10]
                 minutes = line[11:13]
-                now2 = datetime.datetime.now()
+                now2 = datetime.datetime.now(KST)
                 now2 = now.replace(hour=int(hours), minute=int(minutes))
                 pinyxTime = now2
                 pinyxTimeString = pinyxTime.strftime('%H:%M:%S')
@@ -568,7 +569,7 @@ async def on_message(message):
             if (line.startswith(' - 폭 거해지옥 : ')):
                 hours = line[8:10]
                 minutes = line[11:13]
-                now2 = datetime.datetime.now()
+                now2 = datetime.datetime.now(KST)
                 now2 = now.replace(hour=int(hours), minute=int(minutes))
                 dehugTime = now2
                 dehugTimeString = dehugTime.strftime('%H:%M:%S')
@@ -576,7 +577,7 @@ async def on_message(message):
             if (line.startswith(' - 폭 중앙장군 : ')):
                 hours = line[9:11]
                 minutes = line[12:14]
-                now2 = datetime.datetime.now()
+                now2 = datetime.datetime.now(KST)
                 now2 = now.replace(hour=int(hours), minute=int(minutes))
                 sedeTime = now2
                 sedeTimeString = sedeTime.strftime('%H:%M:%S')
@@ -584,7 +585,7 @@ async def on_message(message):
             if (line.startswith(' - 폭 북장군 : ')):
                 hours = line[9:11]
                 minutes = line[12:14]
-                now2 = datetime.datetime.now()
+                now2 = datetime.datetime.now(KST)
                 now2 = now.replace(hour=int(hours), minute=int(minutes))
                 sede2Time = now2
                 sede2TimeString = sede2Time.strftime('%H:%M:%S')
@@ -662,6 +663,6 @@ async def on_message(message):
         file.close()
 
     if message.content.startswith('!현재시간'):
-        await channel.send( datetime.datetime.now().strftime('%H:%M:%S'))
+        await channel.send( datetime.datetime.now(KST).strftime('%H:%M:%S'))
 
 client.run(token)
