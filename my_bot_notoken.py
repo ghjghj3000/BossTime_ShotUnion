@@ -1,10 +1,8 @@
 import asyncio
-
+import os
 import discord
 
 import datetime
-
-import threading
 
 intents = discord.Intents.default()
 intents.message_content = True
@@ -114,8 +112,8 @@ sanduFlag = False
 
 nowTimeString = '1'
 
-# 1-6에서 생성된 토큰을 이곳에 입력해주세요.
-token = 'MTExMjYyNjA3NTM0OTA0MTE3Mw.GKePVu.giiGHFeri80ltQVVAZNYXxehIYyqcXr5_ygEgo'
+access_tokken = os.environ["BOT_TOKKEN"]
+token = access_tokken
 
 #channel = client.get_channel(1112656268826525807) #****보낼 채널 ID****
 
